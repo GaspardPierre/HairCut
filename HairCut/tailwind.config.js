@@ -8,6 +8,7 @@ export default {
     fontFamily: {
       'kaushan': ['Kaushan Script'],
       'open' : ['Open Sans', 'sans serif'],
+      'murecho': ['Murecho', 'sans-serif'],
     },
     extend: {},
   },
