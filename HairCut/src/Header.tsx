@@ -5,40 +5,55 @@ import { Link } from "react-router-dom";
 const Header = () => {
     return (
       <header className="bg-white shadow-md py-4 lg:w-4/5 xl:w-4/5 mx-auto">
-        <div className="container mx-auto flex justify-between items-center">< Link to ="/">
-          <h1 className="text-2xl lg:text-3xl xl:text-3xl font-handwriting text-gray-800 font-kaushan">Côté Salon</h1></Link>
-          <nav>
-            <ul className="flex space-x-8">
+        <div className="container mx-auto flex justify-between items-center">
+        <div className="flex flex-col items-center justify-center w-full lg:w-1/3"> 
+          < Link to ="/"
+         className="w-full">
+         
+
+         
+          <h1 className="text-center lg:text-left text-4xl lg:text-5xl xl:text-5xl font-handwriting text-gray-800 font-kaushan mb-6">Côté Salon</h1>
+          </Link>
+                {/* Afficher "PRENDRE RDV" uniquement en mode mobile */}
+                <Link to="/agenda" className="text-center text-2xl text-custom-brown font-open md:hidden" >
+                    <h2>PRENDRE RDV</h2>
+                </Link>
+                </div>
+          <nav className=" lg:w-2/5">
+            <ul className="hidden lg:flex space-x-8">
               <li>
                 <Link to="/agenda"
-                  className="text-gray-800 font-open hover:text-gray-600 space-x-2 text-sm"
+                  className="text-gray-800 font-open hover:text-gray-600 space-x-2 text-lg"
                 >
                   RDV
                 </Link>
               </li>
               <li>
                 <Link to="/about"
-                  className="text-gray-800 font-open hover:text-gray-600 space-x-2 text-sm"
+                  className="text-gray-800 font-open hover:text-gray-600 space-x-2 text-lg"
                 >
                  A PROPOS
                 </Link>
               </li>
               <li>
                 <Link to="/contact"
-                  className="text-gray-800 font-open hover:text-gray-600 space-x-2 text-sm"
+                  className="text-gray-800 font-open hover:text-gray-600 space-x-2 text-lg"
                 >
                   CONTACT
                 </Link>
               </li>
               <li>
                 <Link to="/contact"
-                  className="text-gray-800 font-open hover:text-gray-600 space-x-2 text-sm"
+                  className="text-gray-800 font-open hover:text-gray-600 space-x-2 text-lg"
                 >
                   PRESTATIONS
                 </Link>
               </li>
             </ul>
           </nav>
+        
+         
+                
         </div>
       </header>
     );
