@@ -19,7 +19,7 @@ const App = () => {
     <Route path="/" element={<MainContent />} />
     <Route path="/about" element={<About />} />
     <Route path="/contact" element={<Contact />} />
-    <Route path="/rdv" element={<Agenda />} />
+    <Route path="/agenda" element={<Agenda />} />
       </Routes>
       {/* Footer component can be added here */}
     </div>

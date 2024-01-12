@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
     return (
-      <header className="bg-white shadow-md py-4 lg:w-4/5 xl:w-4/5 mx-auto">
-        <div className="container mx-auto flex justify-between items-center">
-        <div className="flex flex-col items-center justify-center w-full lg:w-1/3"> 
+      <header className="bg-white shadow-sm py-4 lg:w-4/5 xl:w-4/5 mx-auto ">
+        <div className="container mx-auto flex justify-between items-center ">
+        <div className="flex flex-col items-center justify-center w-full lg:w-1/3 "> 
           < Link to ="/"
          className="w-full">
          
@@ -19,8 +19,8 @@ const Header = () => {
                     <h2>PRENDRE RDV</h2>
                 </Link>
                 </div>
-          <nav className=" lg:w-2/5">
-            <ul className="hidden lg:flex space-x-8">
+          <nav className=" xl:w-2/5">
+            <ul className="hidden lg:flex  space-x-6 xl:space-x-8">
               <li>
                 <Link to="/agenda"
                   className="text-gray-800 font-open hover:text-gray-600 space-x-2 text-lg"
