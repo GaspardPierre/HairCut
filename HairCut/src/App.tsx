@@ -1,10 +1,10 @@
-import { Routes, Route, useNavigate } from 'react-router-dom';
 import "./index.css";
+import { Routes, Route} from 'react-router-dom';
 import MainContent from "./MainContent";
 import Header from "./Header";
 import About  from './About';
 import Contact from './Contact';
-import Agenda from './Agenda/Agenda';
+import Agenda from './Agenda/Agenda.tsx';
 
 
 

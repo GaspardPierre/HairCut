@@ -1,4 +1,4 @@
-import React from 'react';
+
 import TimeSlot from './TimeSlot.tsx';
 import Modal from './Modal.tsx';
 import useAgendaState from './useAgendaState.tsx';
@@ -15,7 +15,7 @@ const Agenda: React.FC = () => {
 
   return (
     <div className="container mx-auto my-8 lg:w-4/5 xl:w-4/5 relative">
-      <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-5 gap-4 ">
         {daysOfWeek.map(day => (
           <div key={day} className="border p-2">
             <h3 className="text-center font-bold">{day}</h3>

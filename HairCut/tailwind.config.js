@@ -10,14 +10,16 @@ export default {
       'open' : ['Open Sans', 'sans serif'],
       'murecho': ['Murecho', 'sans-serif'],
     },
-    colors : {
-      'hair' : '#986C4A',
-      'custom-brown': '#A17D60',
-       'custom-cream': '#F8F7F6',
-       'custom-dark': '#260C0',
-
+   
+    extend: {
+      colors : {
+        'hair' : '#986C4A',
+        'custom-brown': '#A17D60',
+         'custom-cream': '#F8F7F6',
+         'custom-dark': '#260C0',
+  
+      },
     },
-    extend: {},
   },
   plugins: [],
 }
