@@ -4,7 +4,7 @@ import MainContent from "./MainContent";
 import Header from "./Header";
 import About  from './About';
 import Contact from './Contact';
-import Agenda from './Agenda';
+import Agenda from './Agenda/Agenda';
 
 
 
