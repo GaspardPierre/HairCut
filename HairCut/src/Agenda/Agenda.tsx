@@ -14,7 +14,13 @@ for (let hour = 10; hour < 18; hour++) {
 
 const Agenda: React.FC = () => {
   const [weekDates, setWeekDates] = useState<Date[]>([]);
-  const { showModal, selectedTime, handleTimeSlotClick, handleConfirm, handleCloseModal } = useAgendaState();
+  const {
+    showModal,
+    selectedTime,
+    handleTimeSlotClick,
+    handleConfirm,
+    handleCloseModal,
+  } = useAgendaState();
 
   useEffect(() => {
     setWeekDates(getWeekDates());
@@ -25,14 +31,29 @@ const Agenda: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-5 gap-4 ">
         {weekDates.map((date, index) => (
           <div key={index} className="border p-2">
-            <h3 className="text-center font-bold">{daysOfWeek[index]} {formatDateEur(date)}</h3>
-            {hours.map(hour => (
-              <TimeSlot key={hour} day={daysOfWeek[index]} hour={hour} onTimeSlotClick={handleTimeSlotClick} />
-            ))}
-          </div>
-        ))}
+            <h3 className="text-center font-bold">
+              {daysOfWeek[index]} {formatDateEur(date)}
+            </h3>
+            {hours.map((hour) => (
+      <TimeSlot
+        key={hour}
+        day={daysOfWeek[index]}
+        hour={hour}
+        date={formatDateEur(date)}
+        onTimeSlotClick={handleTimeSlotClick}
+      />
+    ))}
+  </div>
+))}
+        
       </div>
-      {showModal && <Modal selectedTime={selectedTime} onConfirm={handleConfirm} onClose={handleCloseModal} />}
+      {showModal && (
+        <Modal
+          selectedTime={selectedTime}
+          onConfirm={handleConfirm}
+          onClose={handleCloseModal}
+        />
+      )}
     </div>
   );
 };
