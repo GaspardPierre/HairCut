@@ -47,7 +47,11 @@ const Modal: React.FC<ModalProps> = ({ selectedTime, onClose, onSubmit }) => {
           </>
         )}
         {showForm && selectedTime && (
-          <AppointmentForm selectedTime={selectedTime} onSubmit={onSubmit} />
+          <AppointmentForm
+           selectedTime={selectedTime}
+            onSubmit={onSubmit}
+            onClose={onClose} 
+             />
         )}
       </div>
     </div>

@@ -14,6 +14,7 @@ export default {
     extend: {
       colors : {
         'hair' : '#986C4A',
+        'hair-hover' : '#79563B',
         'custom-brown': '#A17D60',
          'custom-cream': '#F8F7F6',
          'custom-dark': '#260C0',
