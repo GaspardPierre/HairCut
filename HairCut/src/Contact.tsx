@@ -2,7 +2,7 @@ import  Salon from "/salon.png"
 
 const Contact = () => {
   return (
-    <div className="bg-custom-cream container mx-auto my-8 lg:w-4/5 xl:w-4/5 p-8 shadow-sm rounded-sm">
+    <div className="bg-custom-cream container mx-auto my-8 lg:w-4/5 xl:w-4/5 p-8 shadow-sm rounded-sm flex-column items-center justify-center ">
     <img
       className="h-64 w-full object-cover"
       src={Salon}

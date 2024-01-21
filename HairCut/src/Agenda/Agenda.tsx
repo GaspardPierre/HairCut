@@ -22,8 +22,32 @@ const Agenda: React.FC = () => {
     handleCloseModal,
   } = useAgendaState();
 
-  useEffect(() => {
+  const [appointments, setAppointments] = useState([]);
+
+
+    const fetchAppointments = async () => {
+      try {
+        const response = await fetch('http://localhost:3000/api/appointments'); 
+        let data = await response.json();
+        data = data.map(appointments => {
+          return {
+            ...appointments,
+            date: new Date(appointments.date).toLocaleDateString('fr-FR')
+          };
+        })
+        setAppointments(data);
+      } catch (error) {
+        console.error('Erreur lors de la récupération des rendez-vous', error);
+      }
+    };
+    
+  const refreshAppointmentAfterCreation = () => {
+    fetchAppointments();
+  };
+
+  useEffect(() =>{
     setWeekDates(getWeekDates());
+    fetchAppointments();
   }, []);
 
   return (
@@ -41,6 +65,7 @@ const Agenda: React.FC = () => {
         hour={hour}
         date={formatDateEur(date)}
         onTimeSlotClick={handleTimeSlotClick}
+        appointments={appointments} //
       />
     ))}
   </div>
@@ -52,6 +77,7 @@ const Agenda: React.FC = () => {
           selectedTime={selectedTime}
           onConfirm={handleConfirm}
           onClose={handleCloseModal}
+          onAppointmentsCreated= {refreshAppointmentAfterCreation}
         />
       )}
     </div>

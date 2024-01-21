@@ -1,21 +1,49 @@
 // AppointmentForm.tsx
 import React, { useState } from 'react';
+import { calculateEndTime } from '../utils/CalculateEndTime';
 
 // Assurez-vous que les types des props sont corrects et qu'ils correspondent à ce que vous attendez
-const AppointmentForm = ({ selectedTime, onSubmit, onClose }) => {
+const AppointmentForm = ({ selectedTime, onSubmit, onClose, onAppointmentsCreated }) => {
   const [clientName, setClientName] = useState('');
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    onSubmit({
-      ...selectedTime,
+
+    // Calcul de l'heure de fin basé sur l'heure de début sélectionnée
+    const endTime = calculateEndTime(selectedTime.hour);
+
+    const appointmentData = {
+      date: new Date(selectedTime.date.split('/').reverse().join('-')), // Assurez-vous que ce format de date est correct
+      startTime: selectedTime.hour,
+      endTime,
       clientName,
-      phone,
+      phone: parseInt(phone),
       email,
-    });
+      // clientId: 'VotreClientId', // Si nécessaire, selon votre logique d'application
+    };
+
+    try {
+      const response = await fetch('http://localhost:3000/api/appointments', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(appointmentData)
+      });
+
+      if (response.ok) {
+        alert('Rendez-vous pris avec succès');
+        onClose();
+        onAppointmentsCreated(); 
+      } else {
+        throw new Error('Réponse réseau non OK');
+      }
+    } catch (error) {
+      console.error('Erreur lors de la prise de rendez-vous', error);
+      alert('Erreur lors de la prise de rendez-vous');
+    }
   };
+  
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
@@ -68,6 +96,7 @@ const AppointmentForm = ({ selectedTime, onSubmit, onClose }) => {
    
     </form>
   );
-};
+}
+
 
 export default AppointmentForm;

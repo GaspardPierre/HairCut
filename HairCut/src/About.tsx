@@ -19,12 +19,12 @@ const About = () => {
           <img
             src={Customer}
             alt="Woman adjusting her hair in a salon setting, showcasing the personal and attentive service customers can expect."
-            className="rounded shadow-lg md:absolute md:w-3/5 md:right-1/2 md:transform md:translate-x-1/2 md:z-10 w-80 md:mb-4 mb-8"
+            className="rounded shadow-lg md:absolute md:w-4/5 md:right-1/2 md:transform md:translate-x-1/2 md:z-10 w-80 md:mb-4 mb-8"
           />
           <img
             src={Product}
             alt="Premium salon product bottle with a minimalist design, signifying the quality of products used."
-            className="rrounded shadow-lg md:absolute md:w-3/5 md:left-1/2 md:bottom-1/2 w-80 "
+            className="rrounded shadow-lg md:absolute md:w-4/5 md:left-1/2 md:bottom-1/2 w-80 "
           />
         </div>
       </div>

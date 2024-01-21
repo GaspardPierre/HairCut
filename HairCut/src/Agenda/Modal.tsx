@@ -4,6 +4,7 @@ import AppointmentForm from "./AppointmentForm";
 interface ModalProps {
   selectedTime: { day: string, hour: string, date: string } | null;
   onClose: () => void;
+  onAppointmentsCreated: () => void;
   onSubmit: (appointmentData: {
     day: string;
     hour: string;
@@ -14,7 +15,7 @@ interface ModalProps {
   }) => void;
 }
 
-const Modal: React.FC<ModalProps> = ({ selectedTime, onClose, onSubmit }) => {
+const Modal: React.FC<ModalProps> = ({ selectedTime, onClose, onSubmit,onAppointmentsCreated }) => {
   const [showForm, setShowForm] = useState(false);
 
   const handleConfirmClick = () => {
@@ -51,6 +52,8 @@ const Modal: React.FC<ModalProps> = ({ selectedTime, onClose, onSubmit }) => {
            selectedTime={selectedTime}
             onSubmit={onSubmit}
             onClose={onClose} 
+            onAppointmentsCreated={onAppointmentsCreated}
+         
              />
         )}
       </div>
