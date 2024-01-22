@@ -29,6 +29,7 @@ const Agenda: React.FC = () => {
       try {
         const response = await fetch('http://localhost:3000/api/appointments'); 
         let data = await response.json();
+        console.log(data)
         data = data.map(appointments => {
           return {
             ...appointments,

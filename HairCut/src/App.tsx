@@ -5,6 +5,7 @@ import Header from "./Header";
 import About  from './About';
 import Contact from './Contact';
 import Agenda from './Agenda/Agenda.tsx';
+import AdminAppointments from "./Admin/AdminAppointments.tsx";
 
 
 
@@ -20,6 +21,7 @@ const App = () => {
     <Route path="/about" element={<About />} />
     <Route path="/contact" element={<Contact />} />
     <Route path="/agenda" element={<Agenda />} />
+    <Route path="/admin-appointments" element={<AdminAppointments />} />
       </Routes>
       {/* Footer component can be added here */}
     </div>
