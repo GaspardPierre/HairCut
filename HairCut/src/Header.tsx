@@ -12,7 +12,7 @@ const Header = () => {
          
 
          
-          <h1 className="text-center lg:text-left text-4xl lg:text-5xl xl:text-5xl font-handwriting text-gray-800 font-kaushan mb-6">Côté Salon</h1>
+          <h1 className="text-center lg:text-left text-4xl lg:text-5xl xl:text-5xl font-handwriting text-gray-800 font-kaushan mb-6">HairCut</h1>
           </Link>
                 {/* Afficher "PRENDRE RDV" uniquement en mode mobile */}
                 <Link to="/agenda" className="text-center text-2xl text-custom-brown font-open md:hidden" >
@@ -23,28 +23,28 @@ const Header = () => {
             <ul className="hidden lg:flex  space-x-6 xl:space-x-8">
               <li>
                 <Link to="/agenda"
-                  className="text-gray-800 font-open hover:text-gray-600 space-x-2 text-lg"
+                  className="text-gray-800 font-open hover:text-gray-600 space-x-2 text-lg border-transparent border-2 hover:border-b-custom-brown transition duration-300"
                 >
                   RDV
                 </Link>
               </li>
               <li>
                 <Link to="/about"
-                  className="text-gray-800 font-open hover:text-gray-600 space-x-2 text-lg"
+                  className="text-gray-800 font-open hover:text-gray-600 space-x-2 text-lg border-transparent border-2 hover:border-b-custom-brown transition duration-300"
                 >
                  A PROPOS
                 </Link>
               </li>
               <li>
                 <Link to="/contact"
-                  className="text-gray-800 font-open hover:text-gray-600 space-x-2 text-lg"
+                  className="text-gray-800 font-open hover:text-gray-600 space-x-2 text-lg border-transparent border-2 hover:border-b-custom-brown transition duration-300"
                 >
                   CONTACT
                 </Link>
               </li>
               <li>
                 <Link to="/contact"
-                  className="text-gray-800 font-open hover:text-gray-600 space-x-2 text-lg"
+                  className="text-gray-800 font-open hover:text-gray-600 space-x-2 text-lg border-transparent border-2 hover:border-b-custom-brown transition duration-300"
                 >
                   PRESTATIONS
                 </Link>

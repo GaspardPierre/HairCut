@@ -16,14 +16,14 @@ const MainContent = () => {
               className="w-full h-full object-cover  shadow-md"
             />
           </div>
-          <div className="absolute  top-20 lg:top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white bg-opacity-80 rounded px-4 py-4">
+          <div className="absolute  top-20 lg:top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white bg-opacity-50 rounded px-4 py-4">
           <h2 className="text-xl md:text-4xl text-gray-800 font-semibold">
-            COTE SALON Marly-le-roi
+            HairCut  Marly-le-roi
           </h2>
           </div>
           <div className="flex flex-wrap -mx-4 mt-8">
             <div className="w-full md:w-1/3 px-4 mb-8">
-              <h3 className="text-xl text-gray-800 font-medium mb-4">
+              <h3 className="text-xl text-gray-800 font-medium md:text-2xl md:mb-10 mb-4">
                 COIFFURE FEMME
               </h3>
               <img
@@ -33,7 +33,7 @@ const MainContent = () => {
               />
             </div>
             <div className="w-full md:w-1/3 px-4 mb-8">
-              <h3 className="text-xl text-gray-800 font-medium mb-4">
+              <h3 className="text-xl text-gray-800 font-medium mb-4 md:text-2xl md:mb-10 ">
                 COIFFURE HOMME
               </h3>
               <img
@@ -43,7 +43,7 @@ const MainContent = () => {
               />
             </div>
             <div className="w-full md:w-1/3 px-4 mb-8">
-              <h3 className="text-xl text-gray-800 font-medium mb-4">
+              <h3 className="text-xl text-gray-800 font-medium mb-4 md:text-2xl md:mb-10 ">
                 PRESTATIONS
               </h3>
               <img

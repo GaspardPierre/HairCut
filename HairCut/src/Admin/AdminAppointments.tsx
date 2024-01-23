@@ -11,9 +11,12 @@ const AdminAppointments: React.FC = () => {
       try {
         const response = await fetch('http://localhost:3000/api/appointments');
         let data:Appointment[]= await response.json();
+      
         data = data.map(appointment => ({
           ...appointment,
-          date: new Date(appointment.date).toLocaleDateString('fr-FR')
+          date: new Date(appointment.date).toLocaleDateString('fr-FR'),
+          
+    
            // Convertir les dates ISO
         }));
        
