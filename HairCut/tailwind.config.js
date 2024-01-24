@@ -18,6 +18,7 @@ export default {
         'custom-brown': '#A17D60',
          'custom-cream': '#F8F7F6',
          'custom-dark': '#260C0',
+         'footer': '#16120C'
   
       },
     },

@@ -39,7 +39,7 @@ const TimeSlot: React.FC<TimeSlotProps> = ({
   const occupiedClass = isOccupied || isPast ? "bg-gray-300 cursor-not-allowed" : "hover:cursor-pointer";
   const textClass = isOccupied || isPast ? "text-transparent" : "";
 
-  // Fonction onClick modifiée pour prendre en compte les créneaux passés
+  // Fonction onClick pour prendre en compte les créneaux passés
   const handleOnClick = () => {
     if (!(isOccupied || isPast)) {
       onTimeSlotClick(day, hour, date);
