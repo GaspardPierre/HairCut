@@ -36,7 +36,7 @@ const TimeSlot: React.FC<TimeSlotProps> = ({
   });
 
   // Classe conditionnelle pour les créneaux horaires occupés ou passés
-  const occupiedClass = isOccupied || isPast ? "bg-gray-300 cursor-not-allowed" : "hover:cursor-pointer";
+  const occupiedClass = isOccupied || isPast ? "bg-gray-400 cursor-not-allowed" : "hover:cursor-pointer";
   const textClass = isOccupied || isPast ? "text-transparent" : "";
 
   // Fonction onClick pour prendre en compte les créneaux passés

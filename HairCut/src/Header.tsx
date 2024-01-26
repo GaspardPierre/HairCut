@@ -1,6 +1,7 @@
 
 
 import { Link } from "react-router-dom";
+import { CalendarIcon } from '@heroicons/react/solid';
 
 const Header = () => {
     return (
@@ -16,35 +17,39 @@ const Header = () => {
           </Link>
                 {/* Afficher "PRENDRE RDV" uniquement en mode mobile */}
                 <Link to="/agenda" className="text-center text-2xl text-custom-brown font-open md:hidden" >
+                  <div className="flex">
+                  <CalendarIcon className="h-7 w-8 text-hair-hover mr-2"/>
                     <h2>PRENDRE RDV</h2>
+                  </div>
+              
                 </Link>
                 </div>
           <nav className=" xl:w-2/5">
-            <ul className="hidden lg:flex  space-x-6 xl:space-x-8">
+            <ul className="hidden lg:flex  space-x-6 xl:space-x-8 ">
               <li>
                 <Link to="/agenda"
-                  className="text-gray-800 font-open hover:text-gray-600 space-x-2 text-lg border-transparent border-2 hover:border-b-custom-brown transition duration-300"
+                  className="text-gray-800 font-open hover:text-gray-600 space-x-2 text-lg border-transparent border-2 hover:border-b-footer pb-2 transition duration-300"
                 >
                   RDV
                 </Link>
               </li>
               <li>
                 <Link to="/about"
-                  className="text-gray-800 font-open hover:text-gray-600 space-x-2 text-lg border-transparent border-2 hover:border-b-custom-brown transition duration-300"
+                  className="text-gray-800 font-open hover:text-gray-600 space-x-2 text-lg border-transparent border-2 hover:border-b-footer pb-2 transition duration-300"
                 >
                  A PROPOS
                 </Link>
               </li>
               <li>
                 <Link to="/contact"
-                  className="text-gray-800 font-open hover:text-gray-600 space-x-2 text-lg border-transparent border-2 hover:border-b-custom-brown transition duration-300"
+                  className="text-gray-800 font-open hover:text-gray-600 space-x-2 text-lg border-transparent border-2 hover:border-b-footer pb-2 transition duration-300"
                 >
                   CONTACT
                 </Link>
               </li>
               <li>
                 <Link to="/contact"
-                  className="text-gray-800 font-open hover:text-gray-600 space-x-2 text-lg border-transparent border-2 hover:border-b-custom-brown transition duration-300"
+                  className="text-gray-800 font-open hover:text-gray-600 space-x-2 text-lg border-transparent border-2 hover:border-b-footer pb-2 transition duration-300"
                 >
                   PRESTATIONS
                 </Link>

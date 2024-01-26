@@ -13,7 +13,7 @@ import Footer from "./Footer.tsx";
 
 const App = () => {
   return (
-    <div className="flex flex-col h-full md:h-full">
+    <div className="grid h-screen grid-row-[auto_1fr_auto]  ">
       <Header />
 
       <div className="flex-grow">

@@ -5,7 +5,7 @@ import Product from "/product.png" // Assurez-vous d'importer Tailwind CSS
 
 const About = () => {
   return (
-    <div className="mx-auto my-8 lg:w-4/5 xl:w-4/5 bg-[#F8F7F6] font-murecho min-h-screen flex items-center justify-center p-4 ">
+    <div className="mx-auto my-8 lg:w-4/5 xl:w-4/5 bg-[#F8F7F6] font-murecho h-screen flex items-center justify-center p-4 ">
       <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="space-y-6">
           <h1 className="text-4xl font-bold text-[#986C4A] font-open">
