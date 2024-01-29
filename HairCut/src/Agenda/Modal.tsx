@@ -2,12 +2,12 @@ import { useState } from 'react';
 import AppointmentForm from "./AppointmentForm";
 
 interface ModalProps {
-  selectedTime: { day: string, hour: string, date: string } | null;
+  selectedTime: { day: string, slot: string, date: string } | null;
   onClose: () => void;
   onAppointmentsCreated: () => void;
   onSubmit: (appointmentData: {
     day: string;
-    hour: string;
+    slot: string;
     date: string;
     clientName: string;
     phone: string;
@@ -17,6 +17,7 @@ interface ModalProps {
 
 const Modal: React.FC<ModalProps> = ({ selectedTime, onClose, onSubmit,onAppointmentsCreated }) => {
   const [showForm, setShowForm] = useState(false);
+  console.log(selectedTime)
 
   const handleConfirmClick = () => {
     // Affiche le formulaire lorsque l'utilisateur clique sur "Oui"
@@ -29,7 +30,7 @@ const Modal: React.FC<ModalProps> = ({ selectedTime, onClose, onSubmit,onAppoint
         {!showForm && (
           <>
             <p>
-              Souhaitez-vous prendre un rendez-vous {selectedTime?.day} à {selectedTime?.hour} ?
+              Souhaitez-vous prendre un rendez-vous {selectedTime?.day} à {selectedTime?.slot}  ?
             </p>
             <div className="flex justify-around mt-4">
               <button

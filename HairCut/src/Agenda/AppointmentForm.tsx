@@ -12,17 +12,18 @@ const AppointmentForm = ({ selectedTime, onSubmit, onClose, onAppointmentsCreate
     event.preventDefault();
 
     // Calcul de l'heure de fin basé sur l'heure de début sélectionnée
-    const endTime = calculateEndTime(selectedTime.hour);
+    const endTime = calculateEndTime(selectedTime.slot);
 
     const appointmentData = {
-      date: new Date(selectedTime.date.split('/').reverse().join('-')), // Assurez-vous que ce format de date est correct
-      startTime: selectedTime.hour,
+      date: new Date(selectedTime.day.split('/').reverse().join('-')), // Assurez-vous que ce format de date est correct
+      startTime: selectedTime.slot,
       endTime,
       clientName,
       phone: parseInt(phone),
       email,
       // clientId: 'VotreClientId', // Si nécessaire, selon votre logique d'application
     };
+    console.log("APPOINTMENTDATA***",appointmentData)
 
     try {
       const response = await fetch('http://localhost:3000/api/appointments', {
